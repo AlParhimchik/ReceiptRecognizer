@@ -1,4 +1,4 @@
-package com.receiptrecognizer.rx.extensions
+package com.receiptrecognizer.extensions.rx
 
 import io.reactivex.Maybe
 import io.reactivex.Observable

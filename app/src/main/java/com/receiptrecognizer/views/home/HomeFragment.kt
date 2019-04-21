@@ -12,15 +12,15 @@ import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.jakewharton.rxbinding3.view.clicks
-import com.receiptrecognizer.MainActivity
+import com.receiptrecognizer.NavigationActivity
 import com.receiptrecognizer.NavigationFacade
 import com.receiptrecognizer.R
 import com.receiptrecognizer.rx.DisposableSlot
-import com.receiptrecognizer.rx.extensions.mapNotNull
+import com.receiptrecognizer.extensions.rx.mapNotNull
 import io.reactivex.rxkotlin.subscribeBy
 import javax.inject.Inject
 
-class MainScreenFragment : Fragment() {
+class HomeFragment : Fragment() {
 
     @BindView(R.id.go_to_details_button)
     lateinit var goToDetailsButton: TextView
@@ -55,7 +55,7 @@ class MainScreenFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         ButterKnife.bind(this, view)
 
-        val activity = activity as MainActivity
+        val activity = activity as NavigationActivity
         activity.component.inject(this)
 
         lifecycle.addObserver(observer)
